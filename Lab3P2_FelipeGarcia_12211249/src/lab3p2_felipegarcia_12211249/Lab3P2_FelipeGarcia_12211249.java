@@ -71,7 +71,7 @@ public class Lab3P2_FelipeGarcia_12211249 {
                     System.out.print("Ingrese potencia(Valor de 1 a 9): ");
                     int potencia = lea.nextInt();
                     
-                    if(potencia < 1 || potencia > 9){
+                    while(potencia < 1 || potencia > 9){
                         lea = new Scanner(System.in);
                         System.out.print("Ingreso un valor de potencia invalido, ingreselo denuevo (1-9): ");
                         potencia = lea.nextInt();
@@ -165,7 +165,14 @@ public class Lab3P2_FelipeGarcia_12211249 {
                 break;
                 
                 case 5:{
-                    
+                    System.out.println();
+                            
+                    System.out.println("-----NAVES-----");
+                    for (int i = 0; i < Cohetes.size(); i++) {
+                       System.out.print(i + "). " + Cohetes.get(i).toString());
+                       System.out.println();
+                    }
+                    System.out.println("---------------");
                 }
                 break;
                 
