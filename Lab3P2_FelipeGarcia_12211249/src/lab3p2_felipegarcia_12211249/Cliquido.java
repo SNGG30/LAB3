@@ -9,6 +9,7 @@ package lab3p2_felipegarcia_12211249;
  *
  * @author felip
  */
-public class Cliquido {
+public class Cliquido extends Cohetes{
     
+    private long gasolina;
 }

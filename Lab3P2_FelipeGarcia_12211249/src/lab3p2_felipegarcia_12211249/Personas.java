@@ -9,8 +9,6 @@ package lab3p2_felipegarcia_12211249;
  *
  * @author felip
  */
-public class Csolido extends Cohetes{
+public class Personas {
     
-    private long kg;
-    private String Material;
 }

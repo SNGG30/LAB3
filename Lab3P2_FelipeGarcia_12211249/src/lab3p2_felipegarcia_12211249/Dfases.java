@@ -9,6 +9,9 @@ package lab3p2_felipegarcia_12211249;
  *
  * @author felip
  */
-public class Dfases {
+public class Dfases extends Cohetes{
     
+    private int fases;
+    private int motores;
+    private long altura;
 }

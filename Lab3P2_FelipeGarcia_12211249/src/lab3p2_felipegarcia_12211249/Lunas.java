@@ -11,4 +11,7 @@ package lab3p2_felipegarcia_12211249;
  */
 public class Lunas {
     
+    private String Nombre;
+    private int Crateres;
+    
 }

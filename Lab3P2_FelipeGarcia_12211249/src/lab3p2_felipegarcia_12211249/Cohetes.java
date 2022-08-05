@@ -11,4 +11,10 @@ package lab3p2_felipegarcia_12211249;
  */
 public class Cohetes {
     
+    private long pesosoport;
+    private String nombre;
+    private long serie;
+    private int potencia;
+
+    
 }
