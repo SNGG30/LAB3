@@ -26,6 +26,7 @@ public class Lab3P2_FelipeGarcia_12211249 {
         ArrayList Planetas = new ArrayList();
         ArrayList<Long> SerieNaves = new ArrayList();
         ArrayList<String> NombrePlaneta = new ArrayList();
+        ArrayList<Lunas> L = new ArrayList();
         
         while(centinela == true){
             lea = new Scanner(System.in);
@@ -63,6 +64,7 @@ public class Lab3P2_FelipeGarcia_12211249 {
                             lea = new Scanner(System.in);
                             System.out.print("No puede ingresar numeros de serie repetidos, ingreselo denuevo: ");
                             serie = lea.nextLong();
+                            i = 0;
                         }
                     }
                     SerieNaves.add(serie);
@@ -150,6 +152,93 @@ public class Lab3P2_FelipeGarcia_12211249 {
                 break;
                 
                 case 2:{
+                    Planetas p;
+                    
+                    lea = new Scanner(System.in);
+                    System.out.print("Ingrese el nombre del planeta: ");
+                    String Nombre = lea.nextLine();
+                    
+                    for (int i = 0; i < NombrePlaneta.size(); i++) {
+                        while(NombrePlaneta.get(i).equals(Nombre)){
+                            System.out.print("Ingreso un nombre de planeta repetido: Ingrese otro");
+                            Nombre = lea.nextLine();
+                            
+                            i = 0;
+                        }
+                    }
+                    
+                    lea = new Scanner(System.in);
+                    System.out.print("Ingrese la masa del planeta: ");
+                    double Masa = lea.nextDouble();
+                    
+                    lea = new Scanner(System.in);
+                    System.out.print("Ingrese el radio del planeta: ");
+                    int radio = lea.nextInt();
+                    
+                    lea = new Scanner(System.in);
+                    System.out.print("Ingrese la temperatura del planeta: ");
+                    double temperatura = lea.nextDouble();
+                    
+                    lea = new Scanner(System.in);
+                    System.out.print("Ingrese la velocidad de escape del planeta: ");
+                    double escape = lea.nextDouble();
+                    
+                    lea = new Scanner(System.in);
+                    System.out.print("Que tipo de planeta es? \n"
+                            + "1). Rocoso \n"
+                            + "2). Gaseoso \n"
+                            + "Ingrese opcion: ");
+                    int opcionP = lea.nextInt();
+                    
+                    while(opcionP != 1 && opcionP != 2){
+                        lea = new Scanner(System.in);
+                        System.out.print("Ingreso un valor de nave invalido, ingreselo denuevo \n"
+                                + "1). Rocoso \n"
+                                + "2). Gaseoso \n"
+                                + "Ingrese opcion: ");
+                        opcionP = lea.nextInt();
+                    }
+                    
+                    switch(opcionP){
+                        
+                        case 1:{
+                            p = new Procosos();
+                            
+                            lea = new Scanner(System.in);
+                            System.out.print("Ingrese la densidad del planeta: ");
+                            double densidad = lea.nextDouble();
+                            
+                            lea = new Scanner(System.in);
+                            System.out.print("Hay vida en este planeta? (1 = Si): ");
+                            int opcionv = lea.nextInt();
+                            
+                            boolean vida = false;
+                            if(opcionv == 1){
+                                vida = true;
+                            }
+                            
+                            p = new Procosos(Nombre, Masa, radio, temperatura, escape, L, densidad, vida);
+                            Planetas.add(p);
+                        }
+                        break;
+                        
+                        case 2:{
+                            p = new Pgaseosos();
+                            
+                            lea = new Scanner(System.in);
+                            System.out.print("Ingrese la presion del planeta: ");
+                            double presion = lea.nextDouble();
+                            
+                            lea = new Scanner(System.in);
+                            System.out.print("Ingrese los anillos del planeta: ");
+                            int anillos = lea.nextInt();
+                            
+                            p = new Pgaseosos(presion, anillos, Nombre, Masa, radio, temperatura, escape, L);
+                            
+                            Planetas.add(p);
+                        }
+                        break;
+                    }
                     
                 }
                 break;
