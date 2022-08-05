@@ -5,6 +5,8 @@
  */
 package lab3p2_felipegarcia_12211249;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author felip
@@ -15,14 +17,16 @@ public class Cohetes {
     private String nombre;
     private long serie;
     private int potencia;
+    ArrayList <Personas> P;
 
     public Cohetes() {
     }
-    public Cohetes(double pesosoport, String nombre, long serie, int potencia) {
+    public Cohetes(double pesosoport, String nombre, long serie, int potencia, ArrayList<Personas> P) {
         this.pesosoport = pesosoport;
         this.nombre = nombre;
         this.serie = serie;
         this.potencia = potencia;
+        this.P = P;
     }
 
     public double getPesosoport() {
@@ -56,6 +60,16 @@ public class Cohetes {
     public void setPotencia(int potencia) {
         this.potencia = potencia;
     }
+
+    public ArrayList<Personas> getP() {
+        return P;
+    }
+
+    public void setP(ArrayList<Personas> P) {
+        this.P = P;
+    }
+    
+    
 
     
 }

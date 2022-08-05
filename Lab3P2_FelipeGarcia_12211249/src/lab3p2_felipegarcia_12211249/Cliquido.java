@@ -5,6 +5,8 @@
  */
 package lab3p2_felipegarcia_12211249;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author felip
@@ -15,8 +17,8 @@ public class Cliquido extends Cohetes{
 
     public Cliquido() {
     }
-    public Cliquido(double pesosoport, String nombre, long serie, int potencia, double gasolina) {
-        super(pesosoport, nombre, serie, potencia);
+    public Cliquido(double pesosoport, String nombre, long serie, int potencia, double gasolina, ArrayList<Personas> P) {
+        super(pesosoport, nombre, serie, potencia, P);
         this.gasolina = gasolina;
     }
 
@@ -30,7 +32,7 @@ public class Cliquido extends Cohetes{
     
     public String toString(){
         
-        return "Peso soportable: " + getPesosoport() + " | Nombre del cohete: " + getNombre() + " | Serie del cohete: " + getSerie() + " | Potencia: " + getPotencia() + " | Gasolina: " + gasolina;
+        return "Peso soportable: " + getPesosoport() + " | Nombre del cohete: " + getNombre() + " | Serie del cohete: " + getSerie() + " | Potencia: " + getPotencia() + " | Gasolina: " + gasolina + " | Personas en el cohete: [" + getP() + "]";
     }
     
 }

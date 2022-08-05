@@ -27,14 +27,15 @@ public class Lab3P2_FelipeGarcia_12211249 {
         ArrayList<Long> SerieNaves = new ArrayList();
         ArrayList<String> NombrePlaneta = new ArrayList();
         ArrayList<Lunas> L = new ArrayList();
+        ArrayList<Personas>P = new ArrayList();
         
         while(centinela == true){
             lea = new Scanner(System.in);
             System.out.print("--MENU-- \n"
                     + "1). Crear Cohete \n"
                     + "2). Crear Planeta \n"
-                    + "3). Editar Cohete \n"
-                    + "4). Editar Planeta \n"
+                    + "3). Editar Personas \n"
+                    + "4). Editar Lunas \n"
                     + "5). Listar Cohetes \n"
                     + "6). Listar Planetas \n"
                     + "7). Probar Cohete \n"
@@ -106,7 +107,7 @@ public class Lab3P2_FelipeGarcia_12211249 {
                             System.out.print("Ingrese litros de gasolina: ");
                             double gasolina = lea.nextDouble();
                             
-                            c = new Cliquido(pesosoport, nombre, serie, potencia, gasolina);
+                            c = new Cliquido(pesosoport, nombre, serie, potencia, gasolina, P);
                             
                             Cohetes.add(c);
                         }
@@ -127,7 +128,7 @@ public class Lab3P2_FelipeGarcia_12211249 {
                             System.out.print("Ingrese altura de la nave: ");
                             double altura = lea.nextDouble();
                             
-                            c = new Dfases(pesosoport, nombre, serie, potencia, fases, motores, altura);
+                            c = new Dfases(pesosoport, nombre, serie, potencia, fases, motores, altura , P);
                             Cohetes.add(c);
                         }
                         break;
@@ -143,7 +144,7 @@ public class Lab3P2_FelipeGarcia_12211249 {
                             System.out.print("Ingrese el material del cohete: ");
                             String material = lea.nextLine();
                             
-                            c = new Csolido(pesosoport, nombre, serie, potencia, kg, material);
+                            c = new Csolido(pesosoport, nombre, serie, potencia, kg, material, P);
                             Cohetes.add(c);
                         }
                         break;
@@ -244,19 +245,140 @@ public class Lab3P2_FelipeGarcia_12211249 {
                 break;
                 
                 case 3:{
+                    lea = new Scanner(System.in);
+                    System.out.print("--MENU DE PERSONAS-- \n"
+                            + "1). Agregar personas \n"
+                            + "2). Borrar personas \n"
+                            + "Otro Numero). Salir \n"
+                            + "Ingrese la opcion que desea: ");
+                    int menuP = lea.nextInt();
                     
+                    switch(menuP){
+                        
+                        case 1:{
+                            Personas E = new Personas();
+                            System.out.println();
+                            
+                            System.out.println("-----COHETES-----");
+                            for (int i = 0; i < Cohetes.size(); i++) {
+                               System.out.print(i + "). " + Cohetes.get(i).toString());
+                               System.out.println();
+                            }
+                            System.out.println("---------------");
+                            
+                            lea = new Scanner(System.in);
+                            System.out.print("Ingrese el indice del cohete que le va a agregar una persona: ");
+                            int idx = lea.nextInt();
+                            
+                            lea = new Scanner(System.in);
+                            System.out.print("Ingrese el nombre de la persona: ");
+                            String N = lea.nextLine();
+                            
+                            
+                            lea = new Scanner(System.in);
+                            System.out.print("Ingrese la edad de la persona: ");
+                            int A = lea.nextInt();
+                            
+                            lea = new Scanner(System.in);
+                            System.out.print("Ingrese el peso de la persona: ");
+                            double W = lea.nextInt();
+                            
+                            E = new Personas(N, A, W);
+                            
+                            ((Cohetes)Cohetes.get(idx)).getP().add(E);
+                        }
+                        break;
+                        
+                        case 2:{
+                            System.out.println();
+                            
+                            System.out.println("-----COHETES-----");
+                            for (int i = 0; i < Cohetes.size(); i++) {
+                               System.out.print(i + "). " + Cohetes.get(i).toString());
+                               System.out.println();
+                            }
+                            System.out.println("---------------");
+                            
+                            lea = new Scanner(System.in);
+                            System.out.print("Ingrese el indice del cohete que le va a eliminar una persona: ");
+                            int idx = lea.nextInt();
+                        }
+                        break;
+                        
+                        default:
+                            
+                    }
                 }
                 break;
                 
                 case 4:{
+                          
+                    lea = new Scanner(System.in);
+                    System.out.print("--MENU DE LUNAS-- \n"
+                            + "1). Agregar Lunas \n"
+                            + "2). Borrar Lunas \n"
+                            + "Otro Numero). Salir \n"
+                            + "Ingrese la opcion que desea: ");
+                    int menuL = lea.nextInt();
                     
+                    switch(menuL){
+                        
+                        case 1:{
+                            
+                            Lunas E = new Lunas();
+                            
+                            System.out.println();
+                            
+                            System.out.println("-----PLANETAS-----");
+                            for (int i = 0; i < Planetas.size(); i++) {
+                               System.out.print(i + "). " + Planetas.get(i).toString());
+                               System.out.println();
+                            }
+                            System.out.println("---------------");
+                            
+                            lea = new Scanner(System.in);
+                            System.out.print("Ingrese el indice del planeta que le va a agregar una luna: ");
+                            int idx = lea.nextInt();
+                            
+                            System.out.print("Ingrese el nombre de la luna: ");
+                            String N = lea.nextLine();
+                            
+                            lea = new Scanner(System.in);
+                            System.out.print("Ingrese la cantidad de crateres de la luna: ");
+                            int C = lea.nextInt();
+                            
+                            E = new Lunas(N, C);
+                            
+                            ((Planetas)Planetas.get(idx)).getL().add(E);
+                        }
+                        break;
+                        
+                        case 2:{
+                            System.out.println();
+                            
+                            System.out.println("-----PLANETAS-----");
+                            for (int i = 0; i < Planetas.size(); i++) {
+                               System.out.print(i + "). " + Planetas.get(i).toString());
+                               System.out.println();
+                            }
+                            System.out.println("---------------");
+                            
+                            lea = new Scanner(System.in);
+                            System.out.print("Ingrese el indice del planeta que le va a eliminar una luna: ");
+                            int idx = lea.nextInt();
+                        }
+                        break;
+                        
+                        default:
+                            
+                    }
                 }
                 break;
                 
                 case 5:{
                     System.out.println();
                             
-                    System.out.println("-----NAVES-----");
+                    System.out.println("-----COHETES-----");
                     for (int i = 0; i < Cohetes.size(); i++) {
                        System.out.print(i + "). " + Cohetes.get(i).toString());
                        System.out.println();
@@ -268,7 +390,7 @@ public class Lab3P2_FelipeGarcia_12211249 {
                 case 6:{
                     System.out.println();
                             
-                    System.out.println("-----Planetas-----");
+                    System.out.println("-----PLANETAS-----");
                     for (int i = 0; i < Planetas.size(); i++) {
                        System.out.print(i + "). " + Planetas.get(i).toString());
                        System.out.println();

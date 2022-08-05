@@ -5,6 +5,8 @@
  */
 package lab3p2_felipegarcia_12211249;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author felip
@@ -16,10 +18,11 @@ public class Csolido extends Cohetes{
 
     public Csolido() {
     }
-    public Csolido(double pesosoport, String nombre, long serie, int potencia, double kg, String Material) {
-        super(pesosoport, nombre, serie, potencia);
+    public Csolido(double pesosoport, String nombre, long serie, int potencia, double kg, String Material, ArrayList<Personas> P) {
+        super(pesosoport, nombre, serie, potencia, P);
         this.kg = kg;
         this.Material = Material;
+        this.P = P;
     }
 
     public double getKg() {
@@ -40,6 +43,6 @@ public class Csolido extends Cohetes{
     
     public String toString(){
         
-        return "Peso soportable: " + getPesosoport() + " | Nombre del cohete: " + getNombre() + " | Serie del cohete: " + getSerie() + " | Potencia: " + getPotencia() + " | Kilos de combustible: " + kg + " | Material: " + Material;
+        return "Peso soportable: " + getPesosoport() + " | Nombre del cohete: " + getNombre() + " | Serie del cohete: " + getSerie() + " | Potencia: " + getPotencia() + " | Kilos de combustible: " + kg + " | Material: " + Material + " | Personas en el cohete: [" + getP() + "]";
     }
 }
