@@ -302,6 +302,11 @@ public class Lab3P2_FelipeGarcia_12211249 {
                             lea = new Scanner(System.in);
                             System.out.print("Ingrese el indice del cohete que le va a eliminar una persona: ");
                             int idx = lea.nextInt();
+                            
+                            lea = new Scanner(System.in);
+                            System.out.print("Ingrese el indice de la persona que va a eliminar (Cuente las personas en el listado de arriba): ");
+                            int idx2 = lea.nextInt();
+                            ((Cohetes)Cohetes.get(idx)).getP().remove(idx2);
                         }
                         break;
                         
@@ -366,6 +371,11 @@ public class Lab3P2_FelipeGarcia_12211249 {
                             lea = new Scanner(System.in);
                             System.out.print("Ingrese el indice del planeta que le va a eliminar una luna: ");
                             int idx = lea.nextInt();
+                            
+                            lea = new Scanner(System.in);
+                            System.out.print("Ingrese el indice de la Luna que va a eliminar (Cuente las lunas en el listado de arriba): ");
+                            int idx2 = lea.nextInt();
+                            ((Planetas)Planetas.get(idx)).getL().remove(idx2);
                         }
                         break;
                         
