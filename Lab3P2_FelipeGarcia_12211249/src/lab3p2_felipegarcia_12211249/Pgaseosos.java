@@ -41,6 +41,6 @@ public class Pgaseosos extends Planetas{
     }
     
     public String toString() {
-        return "Nombre: " + getNombre() + " | Masa: " + getMasa() + " | Radio: " + " | Temperatura: " + getTemperatura() + " | Escape: " + getEscape() + " | Lunas: [" + getL() + "] | Planeta: Gaseoso | Presion: " + presion + "Numero de anillos: " + anillos;
+        return "Nombre: " + getNombre() + " | Masa: " + getMasa() + " | Radio: " + getRadio() +" | Temperatura: " + getTemperatura() + " | Escape: " + getEscape() + " | Lunas: [" + getL() + "] | Planeta: Gaseoso | Presion: " + presion + " | Numero de anillos: " + anillos;
     }
 }

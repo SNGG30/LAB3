@@ -266,7 +266,14 @@ public class Lab3P2_FelipeGarcia_12211249 {
                 break;
                 
                 case 6:{
-                    
+                    System.out.println();
+                            
+                    System.out.println("-----Planetas-----");
+                    for (int i = 0; i < Planetas.size(); i++) {
+                       System.out.print(i + "). " + Planetas.get(i).toString());
+                       System.out.println();
+                    }
+                    System.out.println("---------------");
                 }
                 break;
                 

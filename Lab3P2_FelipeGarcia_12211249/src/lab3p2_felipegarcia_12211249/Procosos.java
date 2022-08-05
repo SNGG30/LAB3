@@ -42,6 +42,6 @@ public class Procosos extends Planetas{
     }
 
     public String toString() {
-        return "Nombre: " + getNombre() + " | Masa: " + getMasa() + " | Radio: " + " | Temperatura: " + getTemperatura() + " | Escape: " + getEscape() + " | Lunas: [" + getL() + "] | Planeta: Rocoso | Densidad: " + densidad + "Hay vida: " + vida;
+        return "Nombre: " + getNombre() + " | Masa: " + getMasa() + " | Radio: " + getRadio() + " | Temperatura: " + getTemperatura() + " | Escape: " + getEscape() + " | Lunas: [" + getL() + "] | Planeta: Rocoso | Densidad: " + densidad + " | Hay vida: " + vida;
     }
 }
