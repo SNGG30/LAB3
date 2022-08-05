@@ -11,25 +11,25 @@ package lab3p2_felipegarcia_12211249;
  */
 public class Cohetes {
     
-    private long pesosoport;
+    private double pesosoport;
     private String nombre;
     private long serie;
     private int potencia;
 
     public Cohetes() {
     }
-    public Cohetes(long pesosoport, String nombre, long serie, int potencia) {
+    public Cohetes(double pesosoport, String nombre, long serie, int potencia) {
         this.pesosoport = pesosoport;
         this.nombre = nombre;
         this.serie = serie;
         this.potencia = potencia;
     }
 
-    public long getPesosoport() {
+    public double getPesosoport() {
         return pesosoport;
     }
 
-    public void setPesosoport(long pesosoport) {
+    public void setPesosoport(double pesosoport) {
         this.pesosoport = pesosoport;
     }
 

@@ -13,11 +13,11 @@ public class Personas {
     
     String Nombre;
     int Edad;
-    long Peso;
+    double Peso;
 
     public Personas() {
     }
-    public Personas(String Nombre, int Edad, long Peso) {
+    public Personas(String Nombre, int Edad, double Peso) {
         this.Nombre = Nombre;
         this.Edad = Edad;
         this.Peso = Peso;
@@ -39,11 +39,11 @@ public class Personas {
         this.Edad = Edad;
     }
 
-    public long getPeso() {
+    public double getPeso() {
         return Peso;
     }
 
-    public void setPeso(long Peso) {
+    public void setPeso(double Peso) {
         this.Peso = Peso;
     }
 

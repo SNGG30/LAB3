@@ -11,22 +11,22 @@ package lab3p2_felipegarcia_12211249;
  */
 public class Csolido extends Cohetes{
     
-    private long kg;
+    private double kg;
     private String Material;
 
     public Csolido() {
     }
-    public Csolido(long kg, String Material, long pesosoport, String nombre, long serie, int potencia) {
+    public Csolido(double pesosoport, String nombre, long serie, int potencia, double kg, String Material) {
         super(pesosoport, nombre, serie, potencia);
         this.kg = kg;
         this.Material = Material;
     }
 
-    public long getKg() {
+    public double getKg() {
         return kg;
     }
 
-    public void setKg(long kg) {
+    public void setKg(double kg) {
         this.kg = kg;
     }
 
@@ -38,8 +38,8 @@ public class Csolido extends Cohetes{
         this.Material = Material;
     }
     
-    public String toString(long pesosoport, String nombre, long serie, int potencia, long gasolina){
+    public String toString(){
         
-        return "Peso soportable: " + pesosoport + " | Nombre del cohete: " + nombre + " | Kilos de combustible: " + kg + " | Material: " + Material;
+        return "Peso soportable: " + getPesosoport() + " | Nombre del cohete: " + getNombre() + " | Serie del cohete: " + getSerie() + " | Potencia: " + getPotencia() + " | Kilos de combustible: " + kg + " | Material: " + Material;
     }
 }

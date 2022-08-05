@@ -14,15 +14,15 @@ import java.util.ArrayList;
 public class Planetas {
     
     private String Nombre;
-    private long Masa;
+    private double Masa;
     private int radio;
-    private long temperatura;
-    private long escape;
+    private double temperatura;
+    private double escape;
     ArrayList <Lunas> L;
 
     public Planetas() {
     }
-    public Planetas(String Nombre, long Masa, int radio, long temperatura, long escape, ArrayList<Lunas> L) {
+    public Planetas(String Nombre, double Masa, int radio, double temperatura, double escape, ArrayList<Lunas> L) {
         this.Nombre = Nombre;
         this.Masa = Masa;
         this.radio = radio;
@@ -39,11 +39,11 @@ public class Planetas {
         this.Nombre = Nombre;
     }
 
-    public long getMasa() {
+    public double getMasa() {
         return Masa;
     }
 
-    public void setMasa(long Masa) {
+    public void setMasa(double Masa) {
         this.Masa = Masa;
     }
 
@@ -55,19 +55,19 @@ public class Planetas {
         this.radio = radio;
     }
 
-    public long getTemperatura() {
+    public double getTemperatura() {
         return temperatura;
     }
 
-    public void setTemperatura(long temperatura) {
+    public void setTemperatura(double temperatura) {
         this.temperatura = temperatura;
     }
 
-    public long getEscape() {
+    public double getEscape() {
         return escape;
     }
 
-    public void setEscape(long escape) {
+    public void setEscape(double escape) {
         this.escape = escape;
     }
 

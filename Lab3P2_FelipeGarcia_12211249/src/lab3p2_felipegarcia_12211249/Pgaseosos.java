@@ -13,22 +13,22 @@ import java.util.ArrayList;
  */
 public class Pgaseosos extends Planetas{
     
-    private long presion;
+    private double presion;
     private int anillos;
 
     public Pgaseosos() {
     }
-    public Pgaseosos(long presion, int anillos, String Nombre, long Masa, int radio, long temperatura, long escape, ArrayList<Lunas> L) {
+    public Pgaseosos(double presion, int anillos, String Nombre, double Masa, int radio, double temperatura, double escape, ArrayList<Lunas> L) {
         super(Nombre, Masa, radio, temperatura, escape, L);
         this.presion = presion;
         this.anillos = anillos;
     }
 
-    public long getPresion() {
+    public double getPresion() {
         return presion;
     }
 
-    public void setPresion(long presion) {
+    public void setPresion(double presion) {
         this.presion = presion;
     }
 

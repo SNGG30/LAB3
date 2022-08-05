@@ -13,23 +13,23 @@ import java.util.ArrayList;
  */
 public class Procosos extends Planetas{
     
-    private long densidad;
+    private double densidad;
     private boolean vida;
     
     public Procosos(){
     }
-    public Procosos(String Nombre, long Masa, int radio, long temperatura, long escape, ArrayList<Lunas> L, long densidad, boolean vida) {
+    public Procosos(String Nombre, double Masa, int radio, double temperatura, double escape, ArrayList<Lunas> L, double densidad, boolean vida) {
         super(Nombre, Masa, radio, temperatura, escape, L);
         
         this.densidad = densidad;
         this.vida = vida;
     }
 
-    public long getDensidad() {
+    public double getDensidad() {
         return densidad;
     }
 
-    public void setDensidad(long densidad) {
+    public void setDensidad(double densidad) {
         this.densidad = densidad;
     }
 

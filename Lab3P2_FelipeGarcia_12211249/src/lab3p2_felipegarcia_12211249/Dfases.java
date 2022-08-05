@@ -13,11 +13,11 @@ public class Dfases extends Cohetes{
     
     private int fases;
     private int motores;
-    private long altura;
+    private double altura;
 
     public Dfases() {
     }
-    public Dfases(int fases, int motores, long altura, long pesosoport, String nombre, long serie, int potencia) {
+    public Dfases(double pesosoport, String nombre, long serie, int potencia, int fases, int motores, double altura) {
         super(pesosoport, nombre, serie, potencia);
         this.fases = fases;
         this.motores = motores;
@@ -40,18 +40,18 @@ public class Dfases extends Cohetes{
         this.motores = motores;
     }
 
-    public long getAltura() {
+    public double getAltura() {
         return altura;
     }
 
-    public void setAltura(long altura) {
+    public void setAltura(double altura) {
         this.altura = altura;
     }
     
     
     
-    public String toString(long pesosoport, String nombre, long serie, int potencia, int fases, int motores, long altura){
+    public String toString(){
         
-        return "Peso soportable: " + pesosoport + " | Nombre del cohete: " + nombre + " | Serie del cohete: " + serie + " | Potencia: " + potencia + " | Cantidad de fases " + fases + " | Cantidad de motores: " + motores + " | Altura de la nave: " + altura;
+        return "Peso soportable: " + getPesosoport() + " | Nombre del cohete: " + getNombre() + " | Serie del cohete: " + getSerie() + " | Potencia: " + getPotencia() + " | Cantidad de fases " + fases + " | Cantidad de motores: " + motores + " | Altura de la nave: " + altura;
     }
 }

@@ -48,7 +48,7 @@ public class Lab3P2_FelipeGarcia_12211249 {
                     
                     lea = new Scanner(System.in);
                     System.out.print("Ingrese el peso soportado del cohete: ");
-                    long pesosoport = lea.nextLong();
+                    double pesosoport = lea.nextDouble();
                     
                     lea = new Scanner(System.in);
                     System.out.print("Ingrese el nombre de la nave: ");
@@ -56,7 +56,7 @@ public class Lab3P2_FelipeGarcia_12211249 {
                     
                     lea = new Scanner(System.in);
                     System.out.print("Ingrese el numero de serie de la nave: ");
-                    Long serie = lea.nextLong();
+                    long serie = lea.nextLong();
                     
                     for (int i = 0; i < SerieNaves.size(); i++) {
                         while(SerieNaves.get(i).equals(serie)){
@@ -93,6 +93,58 @@ public class Lab3P2_FelipeGarcia_12211249 {
                                 + "3). Combustible solido \n"
                                 + "Ingrese opcion: ");
                         opcionC = lea.nextInt();
+                    }
+                    
+                    switch(opcionC){
+                        
+                        case 1:{
+                            c = new Cliquido();
+                           
+                            lea = new Scanner(System.in);
+                            System.out.print("Ingrese litros de gasolina: ");
+                            double gasolina = lea.nextDouble();
+                            
+                            c = new Cliquido(pesosoport, nombre, serie, potencia, gasolina);
+                            
+                            Cohetes.add(c);
+                        }
+                        break;
+                        
+                        case 2:{
+                            c = new Dfases();
+                            
+                            lea = new Scanner(System.in);
+                            System.out.print("Ingrese las fases del cohete: ");
+                            int fases = lea.nextInt();
+                            
+                            lea= new Scanner(System.in);
+                            System.out.print("Ingrese la cantidad de motores del cohete: ");
+                            int motores = lea.nextInt();
+                            
+                            lea = new Scanner(System.in);
+                            System.out.print("Ingrese altura de la nave: ");
+                            double altura = lea.nextDouble();
+                            
+                            c = new Dfases(pesosoport, nombre, serie, potencia, fases, motores, altura);
+                            Cohetes.add(c);
+                        }
+                        break;
+                        
+                        case 3:{
+                            c = new Csolido();
+                            
+                            lea = new Scanner(System.in);
+                            System.out.print("Ingrese los kilos de combustible: ");
+                            double kg = lea.nextDouble();
+                            
+                            lea = new Scanner(System.in);
+                            System.out.print("Ingrese el material del cohete: ");
+                            String material = lea.nextLine();
+                            
+                            c = new Csolido(pesosoport, nombre, serie, potencia, kg, material);
+                            Cohetes.add(c);
+                        }
+                        break;
                     }
                 }
                 break;

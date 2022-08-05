@@ -11,26 +11,26 @@ package lab3p2_felipegarcia_12211249;
  */
 public class Cliquido extends Cohetes{
     
-    private long gasolina;
+    private double gasolina;
 
     public Cliquido() {
     }
-    public Cliquido(long gasolina, long pesosoport, String nombre, long serie, int potencia) {
+    public Cliquido(double pesosoport, String nombre, long serie, int potencia, double gasolina) {
         super(pesosoport, nombre, serie, potencia);
         this.gasolina = gasolina;
     }
 
-    public long getGasolina() {
+    public double getGasolina() {
         return gasolina;
     }
 
-    public void setGasolina(long gasolina) {
+    public void setGasolina(double gasolina) {
         this.gasolina = gasolina;
     }
     
-    public String toString(long pesosoport, String nombre, long serie, int potencia, long gasolina){
+    public String toString(){
         
-        return "Peso soportable: " + pesosoport + " | Nombre del cohete: " + nombre + " | Serie del cohete: " + serie + " | Potencia: " + potencia + " | Gasolina: " + gasolina;
+        return "Peso soportable: " + getPesosoport() + " | Nombre del cohete: " + getNombre() + " | Serie del cohete: " + getSerie() + " | Potencia: " + getPotencia() + " | Gasolina: " + gasolina;
     }
     
 }
