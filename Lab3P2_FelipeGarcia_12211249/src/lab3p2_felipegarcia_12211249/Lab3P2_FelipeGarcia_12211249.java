@@ -29,6 +29,13 @@ public class Lab3P2_FelipeGarcia_12211249 {
         ArrayList<Lunas> L = new ArrayList();
         ArrayList<Personas>P = new ArrayList();
         
+        Cohetes DefaultCohetes1;
+        Cohetes DefaultCohetes2;
+        Cohetes DefaultCohetes3;
+        
+        Planetas DefaultPlanetas1;
+        Planetas DefaultPlanetas2;
+        Planetas DefaultPlanetas3;
         while(centinela == true){
             lea = new Scanner(System.in);
             System.out.print("--MENU-- \n"
@@ -410,7 +417,60 @@ public class Lab3P2_FelipeGarcia_12211249 {
                 break;
                 
                 case 7:{
+                    System.out.println();
+                    System.out.println("-----PLANETAS-----");
+                    for (int i = 0; i < Planetas.size(); i++) {
+                       System.out.print(i + "). " + Planetas.get(i).toString());
+                       System.out.println();
+                    }
+                    System.out.println("---------------");
                     
+                    lea = new Scanner(System.in);
+                    System.out.print("Ingrese el planeta que quiere probar: ");
+                    int idx = lea.nextInt();
+                    
+                    Double mass;
+                    int radius;
+                    
+                    mass = ((Planetas)Planetas.get(idx)).getMasa();
+                    radius = ((Planetas)Planetas.get(idx)).getRadio();
+                    lea = new Scanner(System.in);
+                    System.out.print("Cuantos cohetes lanzara? \n"
+                            + "1). Todos \n"
+                            + "2). Uno solo \n"
+                            + "Ingrese opcion: ");
+                    int idx2 = lea.nextInt();
+                    
+                    while(idx2 != 1 && idx2 != 2){
+                        lea = new Scanner(System.in);
+                        System.out.print("Ingreso un numero incorrecto, 1). Todos los cohetes, 2). Uno solo");
+                        idx2 = lea.nextInt();
+                    }
+                    
+                    switch(idx2){
+                        
+                        case 1:{
+                            for (int i = 0; i < Cohetes.size(); i++) {
+                                
+                            }
+                        }
+                        break;
+                        
+                        case 2:{
+                                                
+                        System.out.println("-----COHETES-----");
+                            for (int i = 0; i < Cohetes.size(); i++) {
+                               System.out.print(i + "). " + Cohetes.get(i).toString());
+                               System.out.println();
+                            }
+                        System.out.println("---------------");
+                        
+                            System.out.println("Ingrese el indice del cohete que desea lanzar: ");
+                            int idx3 = lea.nextInt();
+                        }
+                    }
+                        
+                   
                 }
                 break;
                 
