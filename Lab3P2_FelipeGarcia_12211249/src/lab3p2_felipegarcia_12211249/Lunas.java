@@ -13,5 +13,36 @@ public class Lunas {
     
     private String Nombre;
     private int Crateres;
+
+    public Lunas() {
+    }
+
+    public Lunas(String Nombre, int Crateres) {
+        this.Nombre = Nombre;
+        this.Crateres = Crateres;
+    }
+
+    public String getNombre() {
+        return Nombre;
+    }
+
+    public void setNombre(String Nombre) {
+        this.Nombre = Nombre;
+    }
+
+    public int getCrateres() {
+        return Crateres;
+    }
+
+    public void setCrateres(int Crateres) {
+        this.Crateres = Crateres;
+    }
+
+    @Override
+    public String toString() {
+        return "Nombre: " + Nombre + " | Crateres: " + Crateres;
+    }
+    
+    
     
 }

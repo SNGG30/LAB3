@@ -22,6 +22,10 @@ public class Lab3P2_FelipeGarcia_12211249 {
         // TODO code application logic here
         
         boolean centinela = true;
+        ArrayList Cohetes = new ArrayList();
+        ArrayList Planetas = new ArrayList();
+        ArrayList<Long> SerieNaves = new ArrayList();
+        ArrayList<String> NombrePlaneta = new ArrayList();
         
         while(centinela == true){
             lea = new Scanner(System.in);
@@ -33,14 +37,63 @@ public class Lab3P2_FelipeGarcia_12211249 {
                     + "5). Listar Cohetes \n"
                     + "6). Listar Planetas \n"
                     + "7). Probar Cohete \n"
-                    + "8). Salir"
+                    + "8). Salir \n"
                     + "Ingrese la opcion que desea: ");
             int opcionmenu = lea.nextInt();
             
             switch(opcionmenu){
                 
                 case 1:{
+                    Cohetes c;
                     
+                    lea = new Scanner(System.in);
+                    System.out.print("Ingrese el peso soportado del cohete: ");
+                    long pesosoport = lea.nextLong();
+                    
+                    lea = new Scanner(System.in);
+                    System.out.print("Ingrese el nombre de la nave: ");
+                    String nombre = lea.nextLine();
+                    
+                    lea = new Scanner(System.in);
+                    System.out.print("Ingrese el numero de serie de la nave: ");
+                    Long serie = lea.nextLong();
+                    
+                    for (int i = 0; i < SerieNaves.size(); i++) {
+                        while(SerieNaves.get(i).equals(serie)){
+                            lea = new Scanner(System.in);
+                            System.out.print("No puede ingresar numeros de serie repetidos, ingreselo denuevo: ");
+                            serie = lea.nextLong();
+                        }
+                    }
+                    SerieNaves.add(serie);
+                    
+                    lea = new Scanner(System.in);
+                    System.out.print("Ingrese potencia(Valor de 1 a 9): ");
+                    int potencia = lea.nextInt();
+                    
+                    if(potencia < 1 || potencia > 9){
+                        lea = new Scanner(System.in);
+                        System.out.print("Ingreso un valor de potencia invalido, ingreselo denuevo (1-9): ");
+                        potencia = lea.nextInt();
+                    }
+                    
+                    lea = new Scanner(System.in);
+                    System.out.print("Que tipo de cohete es? \n"
+                            + "1). Combustible líquido \n" 
+                            + "2). De fases \n"
+                            + "3). Combustible solido \n"
+                            + "Ingrese opcion: ");
+                    int opcionC = lea.nextInt();
+                    
+                    while(opcionC != 1 && opcionC != 2 && opcionC != 3){
+                        lea = new Scanner(System.in);
+                        System.out.print("Ingreso un valor de nave invalido, ingreselo denuevo \n"
+                                + "1). Combustible liquido \n"
+                                + "2). De fases \n"
+                                + "3). Combustible solido \n"
+                                + "Ingrese opcion: ");
+                        opcionC = lea.nextInt();
+                    }
                 }
                 break;
                 

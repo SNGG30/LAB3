@@ -16,5 +16,46 @@ public class Cohetes {
     private long serie;
     private int potencia;
 
+    public Cohetes() {
+    }
+    public Cohetes(long pesosoport, String nombre, long serie, int potencia) {
+        this.pesosoport = pesosoport;
+        this.nombre = nombre;
+        this.serie = serie;
+        this.potencia = potencia;
+    }
+
+    public long getPesosoport() {
+        return pesosoport;
+    }
+
+    public void setPesosoport(long pesosoport) {
+        this.pesosoport = pesosoport;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public long getSerie() {
+        return serie;
+    }
+
+    public void setSerie(long serie) {
+        this.serie = serie;
+    }
+
+    public int getPotencia() {
+        return potencia;
+    }
+
+    public void setPotencia(int potencia) {
+        this.potencia = potencia;
+    }
+
     
 }

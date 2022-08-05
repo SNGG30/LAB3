@@ -15,9 +15,32 @@ public class Pgaseosos extends Planetas{
     
     private long presion;
     private int anillos;
-    
-    public Pgaseosos(String Nombre, long Masa, int radio, long temperatura, long escape, ArrayList<Lunas> L, long presion, int anillos) {
+
+    public Pgaseosos() {
+    }
+    public Pgaseosos(long presion, int anillos, String Nombre, long Masa, int radio, long temperatura, long escape, ArrayList<Lunas> L) {
         super(Nombre, Masa, radio, temperatura, escape, L);
-        
+        this.presion = presion;
+        this.anillos = anillos;
+    }
+
+    public long getPresion() {
+        return presion;
+    }
+
+    public void setPresion(long presion) {
+        this.presion = presion;
+    }
+
+    public int getAnillos() {
+        return anillos;
+    }
+
+    public void setAnillos(int anillos) {
+        this.anillos = anillos;
+    }
+    
+    public String toString() {
+        return "Nombre: " + getNombre() + " | Masa: " + getMasa() + " | Radio: " + " | Temperatura: " + getTemperatura() + " | Escape: " + getEscape() + " | Lunas: [" + getL() + "] | Planeta: Gaseoso | Presion: " + presion + "Numero de anillos: " + anillos;
     }
 }
