@@ -28,14 +28,23 @@ public class Lab3P2_FelipeGarcia_12211249 {
         ArrayList<String> NombrePlaneta = new ArrayList();
         ArrayList<Lunas> L = new ArrayList();
         ArrayList<Personas>P = new ArrayList();
+        int Lex = 0;
+        int Lf = 0;
         
-        Cohetes DefaultCohetes1;
-        Cohetes DefaultCohetes2;
-        Cohetes DefaultCohetes3;
+        Cohetes DefaultCohetes1 = new Cliquido(10, "D1", 00001, 1000, 218.23, P);
+        Cohetes DefaultCohetes2 = new Dfases(10, "D2", 00002, 1000, 2, 4, 291.2, P);
+        Cohetes DefaultCohetes3 = new Csolido(10, "D3", 00003, 1000, 28.3, "Metal", P);
         
-        Planetas DefaultPlanetas1;
-        Planetas DefaultPlanetas2;
-        Planetas DefaultPlanetas3;
+        Planetas DefaultPlanetas1 = new Procosos("Test1", 3525.12, 51, 31.2, 3012.3, L, 851.2, false);
+        Planetas DefaultPlanetas2 = new Procosos("Test2", 3525.12, 51, 31.2, 3012.3, L, 851.2, true);
+        Planetas DefaultPlanetas3 = new Pgaseosos(1000.5, 5, "Test3", 3525.12, 51, 31.2, 3012.3, L);
+        
+        Cohetes.add(DefaultCohetes1);
+        Cohetes.add(DefaultCohetes2);
+        Cohetes.add(DefaultCohetes3);
+        Planetas.add(DefaultPlanetas1);
+        Planetas.add(DefaultPlanetas2);
+        Planetas.add(DefaultPlanetas3);
         while(centinela == true){
             lea = new Scanner(System.in);
             System.out.print("--MENU-- \n"
@@ -435,6 +444,9 @@ public class Lab3P2_FelipeGarcia_12211249 {
                     mass = ((Planetas)Planetas.get(idx)).getMasa();
                     radius = ((Planetas)Planetas.get(idx)).getRadio();
                     lea = new Scanner(System.in);
+                    
+                    double G = 6.67 * (Math.pow(10, -11));
+                    double Vescape = Math.sqrt(2 * G * mass / radius);
                     System.out.print("Cuantos cohetes lanzara? \n"
                             + "1). Todos \n"
                             + "2). Uno solo \n"
@@ -453,6 +465,8 @@ public class Lab3P2_FelipeGarcia_12211249 {
                             for (int i = 0; i < Cohetes.size(); i++) {
                                 
                             }
+                            
+                            System.out.println("Lanzamientos exitosos: " + Lex + "\n Lanzamientos fallidos: " + Lf);
                         }
                         break;
                         
@@ -467,6 +481,8 @@ public class Lab3P2_FelipeGarcia_12211249 {
                         
                             System.out.println("Ingrese el indice del cohete que desea lanzar: ");
                             int idx3 = lea.nextInt();
+                            
+                            System.out.println("Lanzamientos exitosos: " + Lex + "\n Lanzamientos fallidos: " + Lf);
                         }
                     }
                         
